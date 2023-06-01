@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/index-f25600d5.css">
+</head>
+<body id="changeBg3" style="background-color:black">
+  <div id="app">
+    <button id="changeBg">click</button>
+  </div>
+  
+  
+</body>
+<script>
+function randomNumber() {
+  return Math.random()*255
+}
+ function randomRgb() {
+  var Rb1 = randomNumber()
+  var Rb2 = randomNumber()
+  var Rb3 = randomNumber()
+  return `rgb(${Rb1},${Rb2},${Rb3})`
+}
+document.getElementById("changeBg").addEventListener("click", function() {
+setInterval(function(){
+      document.getElementById("changeBg3").style.backgroundColor = randomRgb()
+  ,4000})
+})
+</script>
+</html>y
